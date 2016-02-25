@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html ng-app="heroesApp">
+<head>
+    <meta charset="utf-8" />
+    <title>DOTA 2 Heroes</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-cloak>
+    <div ng-controller="heroesController">
+        <h1>DOTA Heroes</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="hero in Heroes">
+                    <td>{{hero.ID}}</td>
+                    <td>{{hero.Name}}</td>
+                    <td>{{hero.Type}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>  
